@@ -1,7 +1,7 @@
 const mongoose = require("mongoose"); // Erase if already required
 
 // Declare the Schema of the Mongo model
-var userSchema = new mongoose.Schema(
+var productSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -30,7 +30,7 @@ var userSchema = new mongoose.Schema(
       type: String,
       // enum: ["LV", "Lavie", "Levis"],
     },
-    quantity: Number,
+    quantity: { type: Number, required: true },
     sold: {
       type: Number,
       default: 0,
